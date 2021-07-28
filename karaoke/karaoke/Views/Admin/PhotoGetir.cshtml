@@ -1,0 +1,19 @@
+﻿@model karaoke.Models.Photo
+@{
+    ViewBag.Title = "PhotoGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Photo</h2>
+<br />
+@using (Html.BeginForm("PhotoGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextAreaFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Add</button>
+}
+

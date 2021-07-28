@@ -1,0 +1,46 @@
+﻿@using karaoke.Models
+@model List<Photo>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karaoke Night | Gallery</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css">
+</head>
+<body>
+    <div id="header">
+        <a href="/Default/Index/" id="logo"><img src="~/web/images/logo.png" alt=""></a>
+
+    </div>
+    <div class="body">
+        <ul class="navigation">
+            <li> <a href="/Menu/Index/" id="link1">Menu</a> <a href="/Menu/Index/"><img src="~/web/images/button-menu.jpg" alt=""></a> </li>
+            <li> <a href="/Room/Index/" id="link2">Rooms</a> <a href="/Room/Index/"><img src="~/web/images/button-rooms.jpg" alt=""></a> </li>
+            <li> <a href="/Event/Index/"><img src="~/web/images/button-events.jpg" alt=""></a> <a href="/Event/Index/" id="link3">Events</a> </li>
+            <li> <a href="/Drink/Index/"><img src="~/web/images/button-drinks.jpg" alt=""></a> <a href="/Drink/Index/" id="link4">Drinks</a> </li>
+        </ul>
+        <div id="gallery">
+            <h2>Photo Gallery</h2>
+            <h4>Aliquam semper felis et nunc egestas placerat. Sed vel erat et orci lacinia dapibus. Nulla cursus nisi vel dolor venenatis aliquam fusce consectetur,</h4>
+            <ul>
+                @foreach (var x in Model)
+                {
+                    <li><a href="#"><img src="~/web/images/girl-sing3.jpg" alt=""></a></li>
+                }
+                <li><a href="#"><img src="~/web/images/girl-sing3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="~/web/images/group-singing2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="~/web/images/girls-singing2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="~/web/images/girl-smiling3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="~/web/images/boys-drinking3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="~/web/images/asian-girl-singing.jpg" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@using karaoke.Models
+@model List<Photo>
+@{
+    ViewBag.Title = "Photo";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Photo</h2>
+<br />
+<table class="table table-bordered ">
+    <tr>
+        <th>Title</th>
+        <th>Photo</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+      
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Baslik</td>
+            <td>@x.BlogImage</td>
+            <td><a href="/Admin/PhotoSil/@x.ID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/PhotoGetir/@x.ID" class="btn btn-warning">Update</a></td>
+            
+        </tr>
+
+    }
+
+</table>
+<a href="/Admin/NewPhoto/" class="btn btn-primary">New Post</a>
+
+

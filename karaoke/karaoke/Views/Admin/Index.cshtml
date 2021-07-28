@@ -1,0 +1,35 @@
+﻿@using karaoke.Models
+@model List<Event>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Event List</h2>
+<br />
+<table class="table table-bordered ">
+    <tr>
+        <th>Title</th>
+        <th>Explanation</th>
+        <th>Date</th>
+        <th>Photo</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+     
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.Baslik</td>
+    <td>@x.Aciklama</td>
+    <td>@x.Tarih</td>
+    <td>@x.BlogImage</td>
+    <td><a href="/Admin/EventSil/@x.ID" class="btn btn-danger">Delete</a></td>
+    <td><a href="/Admin/EventGetir/@x.ID" class="btn btn-warning">Update</a></td>
+   
+</tr>
+
+    }
+
+</table>
+<a href="/Admin/NewEvent/" class="btn btn-primary">New Post</a>

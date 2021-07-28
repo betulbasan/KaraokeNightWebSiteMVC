@@ -1,0 +1,19 @@
+﻿@model karaoke.Models.Room
+@{
+    ViewBag.Title = "RoomGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Room</h2>
+<br />
+@using (Html.BeginForm("RoomGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.FotoUrl)
+    @Html.TextBoxFor(x => x.FotoUrl, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Add</button>
+}
+

@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karaoke Night</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css">
+</head>
+<body>
+    
+    @RenderBody()
+    <div id="footer">
+        <div>
+            <div id="first">
+                <a href="#" class="logo">Karaoke Night</a>
+                <p>email@email.com Tel: +89 2980 3600</p>
+                <p>7000 Ut placerat accumsan sem enean dapibu</p>
+                <p>Cras molestie metus Co. Ltd, Pellentes ABC 100</p>
+            </div>
+            <div>
+                <h3><span>Connect</span> with us</h3>
+                <a href="#" id="facebook">Facebook</a> <a href="#" id="twitter">Twitter</a>
+            </div>
+            <div>
+                <h4>Subscribe to our <span>NEWSLETTER</span></h4>
+                <p>Placerat accumsan sem enean dapibus Cra</p>
+                <p>molestie metus vitae urna eget tellus ultricie</p>
+                <form action="#">
+                    <input type="text" id="input" value="Enter Email Address" onBlur="this.value=!this.value?'Enter Email Address':this.value;" onFocus="this.select()" onClick="this.value='';">
+                    <input type="submit" id="submit" value="">
+                </form>
+            </div>
+            <p>Copyright &copy; 2045 <a href="#">Company Name</a> All rights reserved | Design By: <a href="http://www.freewebsitetemplates.com/">freewebsitetemplates.com</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿@using karaoke.Models
+@model List<Room>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karaoke Night | Rooms</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/web/css/style.css" type="text/css">
+</head>
+<body>
+    <div id="header">
+        <a href="/Default/Index/" id="logo"><img src="~/web/images/logo.png" alt=""></a>
+    </div>
+    <div class="body">
+        <ul class="navigation">
+            <li> <a href="/Menu/Index/" id="link1">Menu</a> <a href="/Menu/Index/"><img src="~/web/images/button-menu.jpg" alt=""></a> </li>
+            <li> <a href="/Room/Index/" id="link2">Rooms</a> <a href="/Room/Index/"><img src="~/web/images/button-rooms.jpg" alt=""></a> </li>
+            <li> <a href="/Event/Index/"><img src="~/web/images/button-events.jpg" alt=""></a> <a href="/Event/Index/" id="link3">Events</a> </li>
+            <li> <a href="/Drink/Index/"><img src="~/web/images/button-drinks.jpg" alt=""></a> <a href="/Drink/Index/" id="link4">Drinks</a> </li>
+        </ul>
+        <div id="rooms">
+            <h2>Rooms</h2>
+            @foreach (var x in Model)
+            {
+                <div>
+                    <h5>Room</h5>
+                    <h6>VIP</h6>
+                    <a href="#"><img src="@x.FotoUrl" alt=""></a>
+                    <p>@x.Aciklama</p>
+                </div>
+
+            }
+            <div>
+                <h5>Room</h5>
+                <h6>Donec Vive</h6>
+                <a href="#"><img src="~/web/images/girls-singing3.jpg" alt=""></a>
+                <p>This website template has been designed by Free Website Templates for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us.</p>
+                <span>Aenean quis : 10 pax</span> <span>Price : &pound; 5</span>
+            </div>
+
+            <div>
+                <h5>Room</h5>
+                <h6>Proin Pulvinar</h6>
+                <a href="#"><img src="~/web/images/boys-dringking4.jpg" alt=""></a>
+                <p>If you're experiencing issues and concerns about this website template, join the discussion on our forum and meet other people in the community who share the same interests with you.</p>
+                <span>Aenean quis : 20 pax</span> <span>Price : &pound; 5</span>
+            </div>
+            <div>
+                <h5>Room</h5>
+                <h6>Morbi in erat</h6>
+                <a href="#"><img src="~/web/images/group-singing3.jpg" alt=""></a>
+                <p>Donec eget arcu at elit malesuada egestas. Nulla lobortis consectetur tempus. Cras ligula nisi, gravida vitae facilisis ac, ullamcorper non lorem. Etiam idorcivelit. Duis varius sodal es neque vitae faucibus. Duis posuere elementum tortor.</p>
+                <span>Aenean quis : 30 pax</span> <span>Price : &pound; 5</span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

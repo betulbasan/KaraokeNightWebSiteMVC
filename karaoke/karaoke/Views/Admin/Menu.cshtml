@@ -1,0 +1,32 @@
+﻿@using karaoke.Models
+@model List<Menu>
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Menu</h2>
+<br />
+<table class="table table-bordered ">
+    <tr>
+        <th>Title</th>
+        <th>Explanation</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+      
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Baslik</td>
+            <td>@x.Aciklama</td>
+            <td><a href="/Admin/MenuSil/@x.ID" class="btn btn-danger">Delete</a></td>
+            <td><a href="/Admin/MenuGetir/@x.ID" class="btn btn-warning">Update</a></td>
+            
+        </tr>
+
+    }
+
+</table>
+<a href="/Admin/NewMenu/" class="btn btn-primary">New Post</a>
+

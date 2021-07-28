@@ -1,0 +1,18 @@
+﻿@model karaoke.Models.Drink
+@{
+    ViewBag.Title = "DrinkGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Update Drink</h2>
+<br />
+@using (Html.BeginForm("DrinkGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Add</button>
+}
